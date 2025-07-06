@@ -1,0 +1,33 @@
+require("dotenv").config();
+const { ethers } = require("ethers");
+const tokenABI = require("../artifacts/contracts/EnergyToken.sol/EnergyToken.json").abi;
+
+// Connect to Rootstock Testnet RPC
+const provider = new ethers.providers.JsonRpcProvider("https://public-node.testnet.rsk.co");
+
+// Load deployer wallet
+const wallet = new ethers.Wallet(process.env.PRIVATE_KEY, provider);
+
+// Replace with your deployed contract address
+const contractAddress = "0xYourDeployedContractAddress";
+
+// Load contract instance
+const energyToken = new ethers.Contract(contractAddress, tokenABI, wallet);
+
+// Simulate smart meter reading
+async function simulateMeter() {
+  const usage = Math.floor(Math.random() * 20); // Random 0-20 kWh
+  console.log(`Energy usage detected: ${usage} kWh`);
+
+  if (usage >= 10) {
+    const amount = ethers.utils.parseEther(usage.toString());
+    const tx = await energyToken.mint(wallet.address, amount);
+    await tx.wait();
+    console.log(` Minted ${usage} ECT tokens`);
+  } else {
+    console.log(" Usage below threshold, no minting executed.");
+  }
+}
+
+// Run simulation once for demo (can be set to run periodically)
+simulateMeter();
