@@ -92,7 +92,7 @@ Before diving into coding, ensure you have a complete and functional development
     * Installation: `npm install @openzeppelin/contracts`
 * **Rootstock Testnet Faucet**: Provides free `tRBTC` (testnet RBTC) for development purposes, needed to pay for gas fees.
     * [Claim testnet funds here](https://faucet.rootstock.io/)
-* **GitHub**: Required for submission per Hacktivator 2.0 rules, containing your contract, scripts, README, and diagrams.
+
 
 ## 6. Project Folder Structure
 
