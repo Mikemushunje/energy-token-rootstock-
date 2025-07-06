@@ -1,4 +1,4 @@
-EnergyToken: Tokenized Energy Microgrid Payments on Rootstock
+ EnergyToken: Tokenized Energy Microgrid Payments on Rootstock
 
 This repository contains a decentralized energy tokenization system built on the Rootstock blockchain. It demonstrates how smart contracts can automate billing and payments in microgrids, addressing inefficiencies in traditional energy payment systems.
 
@@ -169,11 +169,8 @@ The EnergyToken operates with a dynamic supply model, minting tokens only when v
  * Circulation Flow: [Producer] -> Mint Tokens -> [Consumer] -> Burn Tokens -> [Grid Operator] -> Redeem Rewards
  * Incentives: Can include bonus tokens for producers, rebates for consumers, and rewards for developers.
  * Governance: Owner-controlled, with a DAO-ready upgrade path for future decentralization.
-11. Payment Lifecycle Diagram
-This diagram illustrates the end-to-end process of how energy data is turned into digital value through the EnergyToken system on Rootstock.
-Diagram:
-(You will insert your energy-flow.png diagram here in your GitHub repository.)
-Flow Breakdown:
+11. Payment Lifecycle 
+
  * Smart Meter: Captures real-time energy data (e.g., kWh) and sends it to the Oracle/API layer.
  * Oracle / API: Processes energy data, validates usage against thresholds (e.g., 10 kWh), and triggers the Smart Contract.
  * Smart Contract (EnergyToken.sol): Contains logic for minting or burning EnergyTokens, triggered by the Oracle/API, and updates User Wallet balances.
