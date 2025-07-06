@@ -1,3 +1,2 @@
-const [deployer] = await ethers.getSigners();
-const EnergyToken = await ethers.getContractFactory("EnergyToken");
-const token = await EnergyToken.attach("0xYourDeployedContractAddress"); // <-- UPDATE THIS!
+
+
